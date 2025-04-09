@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa com Busca de Bairros</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+      height: 800px;
+      width: 100%;
+    }
+    .popup-img {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin-top: 5px;
+    }
+    #search-container {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mapa com Busca de Bairros/Vilas</h1>
+
+  <div id="search-container">
+    <input type="text" id="search" placeholder="Buscar bairro, vila ou local marcado..." />
+    <button onclick="searchMarker()">Buscar</button>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map', {
+      center: [-23.5886, -48.0488],
+      zoom: 13,
+      minZoom: 12,
+      maxBounds: L.latLngBounds(
+        [-23.65, -48.15],
+        [-23.52, -47.95]
+      ),
+      maxBoundsViscosity: 1.0
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Lista de locais com aliases
+    const locais = [
+      {
+        nome: "Macefer Reciclagem",
+        aliases: ["Macefer Reciclagem", "Chapada Grande"],
+        coordenadas: [-23.593883, -47.987828],
+        popup: `<b>• Macefer Reciclagem - Chapada Grande</b>
+        <br>
+        <img src="img/macefer.jpg" class="popup-img">
+        <br>
+        <a href =""> Mais detalhes </a> `
+      },
+    ];
+
+    // Cria marcadores e mapeia todos os nomes e aliases
+    const busca = {}; // chave: nome/alias, valor: marcador
+    locais.forEach(local => {
+      const marker = L.marker(local.coordenadas).addTo(map)
+        .bindPopup(local.popup);
+
+      // Adiciona nome principal
+      busca[local.nome.toLowerCase()] = marker;
+
+      // Adiciona aliases
+      local.aliases.forEach(alias => {
+        busca[alias.toLowerCase()] = marker;
+      });
+    });
+
+    // Função de busca com match parcial
+    function searchMarker() {
+      const termo = document.getElementById('search').value.trim().toLowerCase();
+
+      // Busca por correspondência exata primeiro
+      if (busca[termo]) {
+        map.setView(busca[termo].getLatLng(), 15);
+        busca[termo].openPopup();
+        return;
+      }
+
+      // Busca parcial (contém o termo digitado)
+      const entradaParcial = Object.entries(busca).find(([nome]) => nome.includes(termo));
+
+      if (entradaParcial) {
+        const marker = entradaParcial[1];
+        map.setView(marker.getLatLng(), 15);
+        marker.openPopup();
+      } else {
+        alert("Local não encontrado. Tente nome de um bairro ou vila cadastrada.");
+      }
+    }
+  </script>
+</body>
+</html>
