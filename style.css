@@ -127,6 +127,7 @@ footer {
     margin: 0 auto; /* centraliza a div na página */
     padding: 20px;
     flex-wrap: wrap; /* importante pra adaptar em telas pequenas */
+    margin-top: 40px;
     margin-bottom: 200px;
 }
 
@@ -159,3 +160,100 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.login-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.formulario-login {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.titulo-login {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Pagina login*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  
+  .imagem-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+  }
+  
+  .foto-login {
+    width: 500px;
+    max-width: 1000px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: linear-gradient(
+      to right,
+      rgba(71, 163, 93, 0.6) 30%,
+      rgba(251, 251, 227, 0.1) 100%
+    );
+  }
+  
+  .formulario-login {
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    margin-left: 160px;
+  }
+  
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-login label {
+    font-weight: 500;
+    color: #6e6e5f;
+  }
+  
+  .form-login input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .form-login button {
+    background-color: #092b2c;
+    color: #fbfbe3;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-login button:hover {
+    background-color: #3A7D52;
+  }
