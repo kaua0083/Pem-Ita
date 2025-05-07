@@ -21,7 +21,25 @@ h1, h2, h3, h4, h5, h6 {
 nav a {
     color: #fbfbe3; 
 }
+.apresentacao-inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    margin-bottom: 3px; 
+}
 
+.apresentacao-inicial h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.apresentacao-inicial p {
+    font-size: 1rem;
+    max-width: 900px; 
+    line-height: 1.6;
+}
 a {
     font-family: 'Roboto', sans-serif;
     color: #3A7D52; 
@@ -67,7 +85,6 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 25px; 
     margin-bottom: 50px;
 }
 
