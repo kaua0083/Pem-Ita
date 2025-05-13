@@ -274,3 +274,74 @@ footer {
   .form-login button:hover {
     background-color: #3A7D52;
   }
+
+/* Página de detalhes específica */
+.pagina-detalhes {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    display: block; /* Adicionando display block para garantir que os itens fiquem empilhados */
+}
+
+/* Título da página */
+.pagina-detalhes .titulo-detalhes {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Seção da imagem */
+.pagina-detalhes .imagem-ponto {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block; /* Forçar a imagem a ser exibida como um bloco */
+}
+
+.pagina-detalhes .imagem-ponto img {
+    width: 100%; /* Ajusta para que a imagem ocupe toda a largura disponível */
+    max-width: 100%; /* Impede que a imagem ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    display: block; /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Seção de dados */
+.pagina-detalhes .dados-ponto {
+    margin-bottom: 20px;
+    font-size: 16px;
+    display: block; /* Garantir que os dados fiquem empilhados verticalmente */
+}
+
+/* Tabela de valores */
+.pagina-detalhes .valores-materiais {
+    display: block;
+    width: 100%;
+}
+
+.pagina-detalhes .valores-materiais h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.pagina-detalhes .valores-materiais table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+
+.pagina-detalhes .valores-materiais th,
+.pagina-detalhes .valores-materiais td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+.pagina-detalhes .valores-materiais thead {
+    background-color: #f0f0f0;
+}
