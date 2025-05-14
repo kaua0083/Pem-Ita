@@ -1,4 +1,4 @@
-#logo {
+f#logo {
     width: 150px;
 }
 
@@ -70,7 +70,8 @@ header {
 
 form {
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 15px;
 }
 
 nav {
@@ -260,7 +261,7 @@ footer {
     font-size: 16px;
   }
   
-  .form-login button {
+button {
     background-color: #092b2c;
     color: #fbfbe3;
     border: none;
@@ -271,7 +272,7 @@ footer {
     transition: background-color 0.3s ease;
   }
   
-  .form-login button:hover {
+  button:hover {
     background-color: #3A7D52;
   }
 
