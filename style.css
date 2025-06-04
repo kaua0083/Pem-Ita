@@ -358,3 +358,16 @@ button {
 .pagina-detalhes .valores-materiais thead {
     background-color: #f0f0f0;
 }
+/* Responsabilidade mobile */
+
+@media (max-width: 768px) {
+  .pagina-detalhes {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .pagina-detalhes .valores-materiais table,
+  .pagina-detalhes .dados-ponto {
+    font-size: 14px;
+  }
+}
