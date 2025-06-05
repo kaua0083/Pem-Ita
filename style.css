@@ -308,21 +308,20 @@ button {
 /* Seção da imagem */
 .pagina-detalhes .imagem-ponto {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: block; /* Forçar a imagem a ser exibida como um bloco */
 }
 
 .pagina-detalhes .imagem-ponto img {
-    width: 500px; 
+    width: 620px; 
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px;
     display: block; /* Garante que a imagem se comporte como um bloco */
-    margin: 0 auto; /* Centraliza a imagem */
 }
 
 /* Seção de dados */
 .pagina-detalhes .dados-ponto {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 16px;
     display: block; /* Garantir que os dados fiquem empilhados verticalmente */
 }
@@ -331,6 +330,8 @@ button {
 .pagina-detalhes .valores-materiais {
     display: block;
     width: 100%;
+    margin-bottom: 100px;
+
 }
 
 .pagina-detalhes .valores-materiais h2 {
@@ -340,7 +341,8 @@ button {
 }
 
 .pagina-detalhes .valores-materiais table {
-    width: 100%;
+    width: 40%;
+    border-style: dotted;
     border-collapse: collapse;
     font-size: 16px;
     display: block;
@@ -360,13 +362,146 @@ button {
 /* Responsabilidade mobile */
 
 @media (max-width: 768px) {
-  .pagina-detalhes {
-    padding: 10px;
-    max-width: 95%;
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
-  .pagina-detalhes .valores-materiais table,
-  .pagina-detalhes .dados-ponto {
-    font-size: 14px;
+  .imagem-login,
+  .formulario-login {
+    margin: 0;
+    max-width: 200px;
+  }
+
+  .formulario-login {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .foto-login {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  /* Responsividade para a página de detalhes */
+ .pagina-detalhes {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os filhos */
+  gap: 16px;
+}
+
+.pagina-detalhes .titulo-detalhes {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Torna os blocos consistentes e centralizados */
+.pagina-detalhes .imagem-ponto,
+.pagina-detalhes .dados-ponto,
+.pagina-detalhes .valores-materiais {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Imagem responsiva */
+.pagina-detalhes .imagem-ponto img {
+  width: 250px;
+  height: auto;
+}
+
+/* Tamanho da fonte nos dados */
+.pagina-detalhes .dados-ponto {
+  font-size: 14px;
+}
+
+/* Título da tabela */
+.pagina-detalhes .valores-materiais h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Tabela ocupando 100% da largura do container pai */
+.pagina-detalhes .valores-materiais table {
+  width: 150px;
+  font-size: 14px;
+}
+
+.pagina-detalhes .valores-materiais th,
+.pagina-detalhes .valores-materiais td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+ /* Responsividade para a página sobre */
+.sobre-container {
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+ .titulo-sobre {
+    font-size: 26px;
+  }
+
+  .texto-sobre {
+    font-size: 18px;
+    width: 150px;
+  }
+
+  .texto-sobre select {
+    width: 150px;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .texto-sobre label {
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  #info {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #info ul {
+    padding-left: 20px;
+  }
+
+  .imagem-sobre {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagem-sobre img {
+    width: 200px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
   }
 }
+
