@@ -168,14 +168,13 @@ footer {
     width: 200px;
 }
 
-
-.foto-equipe {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.imagem-sobre {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
 }
-
 
 /* Pagina info*/
 
@@ -217,6 +216,12 @@ footer {
     margin-bottom: 20px;
 }
 
+.foto-equipe {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 
 .login-container {
@@ -494,7 +499,7 @@ button {
 
  /* Responsividade para a página sobre */
 .sobre-container {
-    width: 250px;
+    width: 200px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -505,8 +510,8 @@ button {
   }
 
   .texto-sobre {
-    font-size: 30px;
-    width: 300px;
+    font-size: 18px;
+    width: 150px;
   }
 
   .texto-sobre select {
