@@ -176,7 +176,38 @@ footer {
     min-width: 250px;
 }
 
-.titulo-sobre {
+/* Pagina info*/
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  max-width: 700px;
+  margin: 0 auto; /* centraliza a div na página */
+  padding: 20px;
+  flex-wrap: wrap; /* importante pra adaptar em telas pequenas */
+  margin-top: 40px;
+  margin-bottom: 200px;
+}
+
+.texto-info {
+  flex: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 200px;
+}
+
+.imagem-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+}
+
+
+.titulo-info {
     width: 100%;
     text-align: center;
     font-size: 2rem;
@@ -184,12 +215,6 @@ footer {
     margin-bottom: 20px;
 }
 
-.foto-equipe {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
 .login-container {
     display: flex;
@@ -363,7 +388,9 @@ button {
 .info-ponto{
   width: 600px;
 }
-/* Responsabilidade mobile */
+/* Responsividade mobile */
+
+/*   pagina login   */ 
 
 @media (max-width: 768px) {
   .login-container {
@@ -514,5 +541,47 @@ button {
     height: auto;
     border-radius: 12px;
   }
+
+  /* responsividade pagina informações  */
+
+  .info-container{
+    
+      padding: 10px;
+      width: 370px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os filhos */
+      gap: 16px;
+    
+  }
+
+  .texto-info{
+    width: 400px;
+  }
+
+  .texto-sobre {
+    font-size: 18px;
+    width: 150px;
+    align-items: center;
+  }
+
+  .info{
+    font-size: 18px;
+    width: 150px;
+    align-items: center;
+  }
+
+  .info-descarte{
+    font-size: 18px;
+    width: 200px;
+    align-items: center;
+  }
+
+  .imagem-info{
+    width: 280px;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
