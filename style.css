@@ -404,6 +404,7 @@ button {
   /* Responsividade para a página de detalhes */
  .pagina-detalhes {
   padding: 10px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza os filhos */
@@ -414,6 +415,12 @@ button {
   font-size: 20px;
   text-align: center;
 }
+
+.info-ponto{
+  width: 200px;
+}
+
+
 
 /* Torna os blocos consistentes e centralizados */
 .pagina-detalhes .imagem-ponto,
@@ -508,5 +515,4 @@ button {
     border-radius: 12px;
   }
 }
-
 
