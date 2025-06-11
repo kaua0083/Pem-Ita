@@ -359,6 +359,10 @@ button {
 .pagina-detalhes .valores-materiais thead {
     background-color: #f0f0f0;
 }
+
+.info-ponto{
+  width: 600px;
+}
 /* Responsabilidade mobile */
 
 @media (max-width: 768px) {
@@ -504,4 +508,5 @@ button {
     border-radius: 12px;
   }
 }
+
 
